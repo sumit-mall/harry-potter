@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    background-color: #212121;
-    font-family: 'harry p';
+    background-color: #111111;
+    font-family: 'Harry P', sans-serif;
 }
 
 .head {
@@ -10,7 +10,7 @@ body {
     font-size: 50px;
     color: rgb(207, 180, 97);
     text-align: center;
-    text-shadow: rgb(63, 111, 79) 5px -5px 5px, rgb(170, 115, 76) 5px -5px 5px;
+    text-shadow: rgb(63, 111, 79) 5px -5px 5px, rgb(170, 115, 76) 7px -7px 7px;
 }
 
 .house {
@@ -32,20 +32,30 @@ body {
 }
 
 .house:hover li:not(:hover) {
-    filter: blur(4px);
-    transition: 0.7s;
+    filter: blur(10px);
+    transition: 0.7s ease-in-out;
+}
+
+.container:hover .head {
+    filter: opacity(1%);
+    transition: filter 2s ease-in-out;
 }
 
 .house :hover img {
     display: none;
 }
 
+.house :hover h1 {
+    transform: scale(2.2);
+}
+
 .card1 {
+    background-image: url("./assets/gryf-bg.png");
     width: 242px;
     height: 325px;
     border-radius: 30px;
-    background: #212121;
     text-align: center;
+    text-shadow: rgb(255, 106, 0) 0px 0px 0px;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
         -15px -15px 30px rgb(60, 60, 60);
 }
@@ -56,7 +66,26 @@ body {
     visibility: hidden;
 }
 
+.gryf-btn {
+    font-size: 2px;
+    font-weight: 100;
+    visibility: hidden;
+}
+
+.gryf-wand {
+    font-size: 2px;
+    font-weight: 100;
+    display: none;
+}
+
+.gryf-wel {
+    font-size: 2px;
+    font-weight: 100;
+    display: none;
+}
+
 .house :hover .gryf-text {
+    text-shadow: rgb(255, 106, 0) 0px 0px 0px;
     visibility: visible;
     pointer-events: none;
     transition: .7s;
@@ -67,6 +96,45 @@ body {
     color: rgb(170, 115, 76);
 }
 
+.house :hover .gryf-btn {
+    text-decoration: underline;
+    transform: scale(1);
+    visibility: visible;
+    transition: .7s;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 14px;
+    color: rgb(170, 115, 76);
+}
+
+.house :hover .gryf-wand {
+    display: flex;
+    transform: scale(1);
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(170, 115, 76, 0.5));
+    filter: drop-shadow(12px 12px 7px rgba(170, 115, 76, 0.5));
+    width: 200px;
+    height: 35px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.house :hover .gryf-wel {
+    transform: scale(1);
+    display: flex;
+    position: absolute;
+    left: 360px;
+    top: 35px;
+    transition: .7s;
+    font-size: 11px;
+    font-weight: 800;
+    width: 250px;
+    height: 250px;
+    margin-top: 14px;
+    color: rgb(170, 115, 76);
+}
+
 .card1 img {
     width: 250px;
     height: 250px;
@@ -74,6 +142,8 @@ body {
 
 .card1 h1 {
     margin-top: -10px;
+    text-shadow: rgb(255, 106, 0) 0px 0px 3px;
+    ;
     color: rgb(209, 153, 94);
 }
 
@@ -82,7 +152,7 @@ body {
     width: 242px;
     height: 325px;
     border-radius: 30px;
-    background: #212121;
+    background-image: url("./assets/huff-bg.png");
     text-align: center;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
         -15px -15px 30px rgb(60, 60, 60);
@@ -91,6 +161,24 @@ body {
 .huff-text {
     font-size: 2px;
     visibility: hidden;
+}
+
+.huff-btn {
+    font-size: 2px;
+    font-weight: 100;
+    visibility: hidden;
+}
+
+.huff-wand {
+    font-size: 2px;
+    font-weight: 100;
+    display: none;
+}
+
+.huff-wel {
+    font-size: 2px;
+    font-weight: 100;
+    display: none;
 }
 
 .house :hover .huff-text {
@@ -104,6 +192,46 @@ body {
     color: rgb(207, 180, 97);
 }
 
+.house :hover .huff-btn {
+    text-decoration: underline;
+    transform: scale(1);
+    visibility: visible;
+    transition: .7s;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 14px;
+    color: rgb(207, 180, 97);
+}
+
+.house :hover .huff-wand {
+    transform: scale(1);
+    -webkit-filter: drop-shadow(12px 12px 7px rgb(207, 180, 97, 0.5));
+    filter: drop-shadow(12px 12px 7px rgb(207, 180, 97, 0.5));
+    display: flex;
+    transition: .7s;
+    width: 200px;
+    height: 35px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.house :hover .huff-wel {
+    transform: scale(1);
+    display: flex;
+    position: absolute;
+    left: 340px;
+    top: 35px;
+    transition: .7s;
+    font-size: 11px;
+    font-weight: 800;
+    width: 250px;
+    height: 250px;
+    margin-top: 14px;
+    color: rgb(170, 115, 76);
+}
+
 .card2 img {
     width: 250px;
     height: 250px;
@@ -112,6 +240,7 @@ body {
 .card2 h1 {
     margin-top: -10px;
     color: rgb(207, 180, 97);
+    text-shadow: rgb(255, 191, 0) 0px 0px 3px;
 }
 
 
@@ -119,7 +248,7 @@ body {
     width: 242px;
     height: 325px;
     border-radius: 30px;
-    background: #212121;
+    background-image: url("./assets/rave-bg.png");
     text-align: center;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
         -15px -15px 30px rgb(60, 60, 60);
@@ -133,11 +262,30 @@ body {
 .card3 h1 {
     margin-top: -10px;
     color: rgb(170, 115, 76);
+    text-shadow: rgb(62, 94, 115) 2px 2px 6px;
 }
 
 .rave-text {
     font-size: 2px;
     visibility: hidden;
+}
+
+.rave-btn {
+    font-size: 2px;
+    font-weight: 100;
+    visibility: hidden;
+}
+
+.rave-wand {
+    font-size: 2px;
+    font-weight: 100;
+    display: none;
+}
+
+.rave-wel {
+    font-size: 2px;
+    font-weight: 100;
+    display: none;
 }
 
 .house :hover .rave-text {
@@ -148,15 +296,55 @@ body {
     font-size: 12.1px;
     font-weight: 100;
     padding: 13px;
-    color: rgb(209, 153, 94)
+    color: rgb(62, 94, 115);
 }
 
+.house :hover .rave-btn {
+    text-decoration: underline;
+    transform: scale(1);
+    visibility: visible;
+    transition: .7s;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 14px;
+    color: rgb(62, 94, 115);
+}
+
+
+.house :hover .rave-wand {
+    -webkit-filter: drop-shadow(12px 12px 7px rgb(62, 94, 115, 0.5));
+    filter: drop-shadow(12px 12px 7px rgb(62, 94, 115, 0.5));
+    transform: scale(1);
+    display: flex;
+    transition: .7s;
+    width: 200px;
+    height: 35px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.house :hover .rave-wel {
+    transform: scale(1);
+    display: flex;
+    position: absolute;
+    left: -300px;
+    top: 35px;
+    transition: .7s;
+    font-size: 11px;
+    font-weight: 800;
+    width: 250px;
+    height: 250px;
+    margin-top: 14px;
+    color: rgb(170, 115, 76);
+}
 
 .card4 {
     width: 242px;
     height: 325px;
     border-radius: 30px;
-    background: #212121;
+    background-image: url("./assets/slyt-bg.png");
     text-align: center;
     box-shadow: 15px 15px 30px rgb(25, 25, 25),
         -15px -15px 30px rgb(60, 60, 60);
@@ -170,12 +358,33 @@ body {
 .card4 h1 {
     margin-top: -10px;
     color: rgb(63, 111, 79);
+    text-shadow: rgb(0, 255, 85) 0px 0px 2px;
 }
 
 .slyt-text {
     font-size: 2px;
     visibility: hidden;
 }
+
+.slyt-btn {
+    font-size: 2px;
+    font-weight: 100;
+    visibility: hidden;
+}
+
+
+.slyt-wand {
+    font-size: 2px;
+    font-weight: 100;
+    display: none;
+}
+
+.slyt-wel {
+    font-size: 2px;
+    font-weight: 100;
+    display: none;
+}
+
 
 .house :hover .slyt-text {
     visibility: visible;
@@ -186,4 +395,45 @@ body {
     font-weight: 100;
     padding: 13px;
     color: rgb(63, 111, 79);
+}
+
+.house :hover .slyt-btn {
+    text-decoration: underline;
+    transform: scale(1);
+    visibility: visible;
+    transition: .7s;
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    margin-top: 14px;
+    color: rgb(63, 111, 79);
+}
+
+.house :hover .slyt-wand {
+
+    -webkit-filter: drop-shadow(12px 12px 7px rgb(63, 111, 79, 0.5));
+    filter: drop-shadow(12px 12px 7px rgb(63, 111, 79, 0.5));
+    transform: scale(1);
+    display: flex;
+    transition: .7s;
+    width: 200px;
+    height: 35px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.house :hover .slyt-wel {
+    transform: scale(1);
+    display: flex;
+    position: absolute;
+    left: -400px;
+    top: 35px;
+    transition: .7s;
+    font-size: 11px;
+    font-weight: 800;
+    width: 250px;
+    height: 250px;
+    margin-top: 14px;
+    color: rgb(170, 115, 76);
 }
